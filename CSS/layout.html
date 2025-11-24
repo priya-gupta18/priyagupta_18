@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 01</title>
+    <style>
+      body{
+        
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
+      main{
+        width: 900px;
+        height:800px;
+        background-color: lightgray;
+        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+      }
+      #logo, nav,section,header footer{
+        height: 900px;
+        background-color: teal;
+      }
+      #logo{
+        height: 100px; line-height:80px;
+      }
+      nav{
+        height: 50px; line-height:50px;
+      }
+      section{
+        height: 500px;
+        display:flex;
+        flex-direction:row;
+      }
+      #left{
+        flex-grow:1;
+        background-color: lightblue; line-height: 90px ;
+      }
+      #right{
+        flex-grow:2;
+        background-color: lightgreen;
+        line-height:120px;
+
+      }
+        header, footer{
+            height: 70px;
+        }
+    </style>
+</html>
