@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Semantic Layout Example</title>
+  <style>
+    :root{
+      --box-bg: #ffdfe6;   
+      --border: #d78f98;    
+      --gap: 12px;
+      --aside-width: 260px;
+      --radius: 6px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      background: #222; 
+      padding: 18px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      min-height:100vh;
+    }
+
+    .page {
+      width: 520px;               
+      background: transparent;
+      border: 6px solid #111;     
+      padding: 10px;
+      border-radius: 6px;
+      background-clip:padding-box;
+    }
+
+    
+    .container{
+      display:grid;
+      gap: var(--gap);
+      grid-template-rows: auto auto 1fr auto; 
+    }
+
+    header, nav, footer, section, article, aside{
+      background: var(--box-bg);
+      border: 4px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align:center;
+      color:#4a231f;
+      font-weight:600;
+      font-size:1.1rem;
+      min-height: 46px;
+    }
+
+    
+    main {
+      display:grid;
+      grid-template-columns: 1fr var(--aside-width);
+      grid-auto-rows: minmax(110px, auto);
+      gap: var(--gap);
+    }
+
+    
+    section { grid-column: 1 / 2; grid-row: 1 / 2; display:flex; align-items:center; justify-content:center; font-size:1.2rem;}
+    article { grid-column: 1 / 2; grid-row: 2 / 3; display:flex; align-items:center; justify-content:center; font-size:1.1rem;}
+    aside { grid-column: 2 / 3; grid-row: 1 / 3; display:flex; align-items:center; justify-content:center; font-size:1.15rem;}
+
+    header { font-size:1.35rem; }
+    nav { font-size:1.15rem; min-height:48px; display:flex; align-items:center; justify-content:center;}
+    footer { font-size:1.1rem; }
+
+    
+    @media (max-width:600px){
+      .page{ width:100%; }
+      main { grid-template-columns: 1fr; grid-auto-rows: auto; }
+      aside { grid-column: 1 / -1; grid-row: 3 / 4; } 
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header>&lt;header&gt;</header>
+      <nav>&lt;nav&gt;</nav>
+
+      <main>
+        <section>&lt;section&gt;</section>
+        <article>&lt;article&gt;</article>
+        <aside>&lt;aside&gt;</aside>
+      </main>
+
+      <footer>&lt;footer&gt;</footer>
+    </div>
+  </div>
+</body>
+</html>

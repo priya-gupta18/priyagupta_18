@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile Cards</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        background: #fff;
+    }
+
+    .card-container{
+        display: flex;
+        justify-content: center;
+        gap: 30px;               
+        width: 80%;
+        border: 2px solid black;
+        padding: 30px;
+    }
+
+    .card{
+        background: white;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 0px 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .circle{
+        width: 80px;
+        height: 80px;
+        background: #007bff;    
+        border-radius: 50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin: 0 auto 15px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .name{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p{
+        margin: 6px 0;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card-container">
+
+    <div class="card">
+        <div class="circle">JK</div>
+        <div class="name">Jeet Kumar</div>
+        <p>B.Tech - CSE</p>
+        <p>Roll No: 21CS1007</p>
+        <p>1st Year</p>
+    </div>
+
+    <div class="card">
+        <div class="circle">AR</div>
+        <div class="name">Asha Rani</div>
+        <p>B.Tech - IT</p>
+        <p>Roll No: 21IT1012</p>
+        <p>1st Year</p>
+    </div>
+
+    <div class="card">
+        <div class="circle">RK</div>
+        <div class="name">Rohit Kumar</div>
+        <p>B.Tech - ECE</p>
+        <p>Roll No: 21EC1009</p>
+        <p>1st Year</p>
+    </div>
+
+</div>
+
+</body>
+</html>
