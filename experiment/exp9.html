@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive product grid</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f5f5f5;
+      margin:0;
+      padding:20px;
+    }
+    h2{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .grid{
+      display: flex;
+      grid-template-columns: repeat(4,1fr);
+      gap:20px;
+    }
+    .card{
+      background: #fff;
+      border-radius: 8px;
+      box-shadow:0 4px 6px rgba(0 0 0 0 1);
+      padding:16px;
+      text-align: center;
+      box-shadow: inset;
+    }
+    .card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:6px;
+      margin-bottom: 10px;
+    }
+    .card h3{
+      font-size: 18px;
+      margin:0 8px;
+    }
+    .card p{
+      font-size: 14px;
+      margin: 0 4px;
+      color: #555;
+    }
+    .price{
+      font-weight: bold;
+      color:007bff;
+    }
+    @media(max-width:1024px){
+      .grid{
+        grid-template-columns: repeat(2 1fr);
+      }
+    }
+    @media(max-width:600px){
+      .grid{
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Responsive Product Grid</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://apisap.fabindia.com/medias/20175879-01.jpg?context=bWFzdGVyfGltYWdlc3wxMDUyMTB8aW1hZ2UvanBlZ3xhR1V3TDJnMFlpODBPRGM1TnpJM05qWXpOVEUyTmk4eU1ERTNOVGczT1Y4d01TNXFjR2N8MmU4NDg0M2U4YWE5ZTY3ZDI5NzNjNjUxMmQ2MDY3YTM2MmFhMjk0ZDNmZjg0N2NiMmUzNDZjZTVlZWEwMjAwNg&aio=w-500" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>High Quality Item with Great Features.</p>
+      <p class="Price">₹499</p>
+    </div>
+    <div class="card">
+      <img src="https://5.imimg.com/data5/ANDROID/Default/2024/11/464285838/JZ/VT/VQ/39290697/product-jpeg-500x500.jpg" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Duarable and stylish daily use.</p>
+      <p class="Price">₹799</p>
+    </div>
+    <div class="card">
+      <img src="https://kathryns.co.uk/cdn/shop/files/Missoni-Kids-Boys-Colourful-Abstract-Pattern-T-Shirt-Kathryns.jpg?v=1694017894" alt="Product 3">
+      <h3>Product 3</h3>
+      <p> Lightweight and comfortable.</p>
+      <p class="Price">₹1299</p>
+    </div>
+    <div class="card">
+      <img src="https://www.beyours.in/cdn/shop/files/black-classic-shirt_1200x1200_crop_center.jpg?v=1744815740" alt="Product 4">
+      <h3>Product 4</h3>
+      <p>Trendy Design with Premium Quality</p>
+      <p class="Price">₹999</p>
+    </div>
+  </div>
+  
+</body>
+</html>

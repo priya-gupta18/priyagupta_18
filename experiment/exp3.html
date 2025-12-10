@@ -1,227 +1,139 @@
-!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>College Timetable — CSE Department</title>
-  <style>
-    :root{
-      --accent:#2b6cb0;
-      --muted:#f3f6fb;
-      --border:#d7e3f2;
-      --text:#18354a;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    body{
-      margin:24px;
-      background: linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
-      color:var(--text);
-    }
-    .card{
-      max-width:1100px;
-      margin:0 auto;
-      background: white;
-      border-radius:10px;
-      box-shadow: 0 6px 22px rgba(12,40,60,0.07);
-      padding:18px;
-      border:1px solid var(--border);
-    }
-    header{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom:12px;
-    }
-    h1{
-      font-size:20px;
-      margin:0;
-      color:var(--accent);
-    }
-    p.subtitle{
-      margin:0;
-      color:#476b86;
-      font-size:13px;
-    }
-
-    table.timetable{
-      width:100%;
-      border-collapse:collapse;
-      table-layout:fixed;
-      font-size:14px;
-    }
-    table.timetable th, table.timetable td{
-      border:1px solid var(--border);
-      padding:10px 8px;
-      text-align:center;
-      vertical-align:middle;
-      word-wrap:break-word;
-    }
-    table.timetable th{
-      background:linear-gradient(180deg,var(--muted),#ffffff);
-      color:var(--accent);
-      font-weight:600;
-      font-size:13px;
-    }
-
-    
-    td.time{
-      background:#f7fbff;
-      width:110px;
-      font-weight:600;
-    }
-
-    
-    .lab{
-      background: linear-gradient(90deg,#fffefc,#f6fffb);
-      color:#0b6658;
-      font-weight:600;
-    }
-
-    
-    .break{
-      background:#fafafa;
-      color:#6b7280;
-      font-style:italic;
-    }
-
-    
-    .legend{
-      margin-top:12px;
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      font-size:13px;
-      color:#334a5f;
-    }
-    .legend span{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:6px 8px;
-      border-radius:6px;
-      background:#fbfdff;
-      border:1px solid var(--border);
-    }
-
-
-    @media (max-width:760px){
-      .card{padding:12px}
-      td.time{display:none}
-      table.timetable th:nth-child(1){display:none}
-      table.timetable td, table.timetable th{font-size:13px;padding:8px}
-    }
-  </style>
+    <title>College Timetable - CSE Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+            
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f7f7f7;
+        }
+        /* Lab details box inside Wednesday column */
+        .lab-box {
+            border: 1px solid black;
+            display: inline-block;
+            padding: 5px;
+            width: 150px;
+            background-color: #fff;
+        }
+        .lab-box b {
+            display: block;
+           
+            margin-bottom: 5px;
+        }
+        .lab-box table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 14px;
+        }
+        .lab-box td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
 </head>
 <body>
-  <div class="card" role="region" aria-label="CSE Department Timetable">
-    <header>
-      <div>
-        <h1>College Timetable — CSE Department</h1>
-        <p class="subtitle">Weekly schedule (Mon — Fri)</p>
-      </div>
-      <div style="text-align:right;font-size:13px;color:#567895">
-        Academic Year: <strong>—</strong><br/>
-        Semester: <strong>—</strong>
-      </div>
-    </header>
+   
 
-    <table class="timetable" aria-describedby="legend">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Monday</th>
-          <th>Tuesday</th>
-          <th>Wednesday</th>
-          <th>Thursday</th>
-          <th>Friday</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="time">9:00 - 10:00</td>
-          <td>Mathematics</td>
-          <td>C Programming</td>
-          <td>Mathematics</td>
-          <td>Workshop</td>
-          <td>Computer Networks / English</td>
-        </tr>
 
-        <tr>
-          <td class="time">10:00 - 11:00</td>
-          <td>English</td>
-          <td>English</td>
-          <td>English</td>
-          <td>English</td>
-          <td>English</td>
-        </tr>
+<table style="border: 2px solid black; border-collapse: collapse; width: 100%; text-align: center;">
+    <caption>College Timetable - CSE Department</caption>
+    <tr>
+        <th>Day / Time</th>
+        <th>9:00 - 10:00</th>
+        <th>10:00 - 11:00</th>
+        <th>11:00 - 12:00</th>
+        <th>12:00 - 1:00</th>
+        <th>1:00 - 2:00</th>
+        <th>2:00 - 3:00</th>
+        <th>3:00 - 4:00</th>
+    </tr>
 
-        <tr>
-          <td class="time">11:00 - 12:00</td>
-          <td>Physics</td>
-          <td>Physics</td>
-          <td>Physics</td>
-          <td>Physics</td>
-          <td>Physics</td>
-        </tr>
+    <tr>
+        <th>Monday</th>
+        <td rowspan="2">Mathematics </td>
+        <td>English</td>
+         <td rowspan="3">Physics</td>
+        <td>Break</td>
+        <td colspan="2">Computer Lab</td>
+        <td>Sports</td>
+    </tr>
 
-        <tr>
-          <td class="time">12:00 - 1:00</td>
-          <td class="break">Break</td>
-          <td class="break">Break</td>
-          <td class="break">Break</td>
-          <td class="break">Break</td>
-          <td class="break">Break</td>
-        </tr>
+    <tr>
+        <th>Tuesday</th>
+        
+        <td>C Programming</td>
+        
+        <td>Break</td>
+        <td colspan="2">Electronics Lab</td>
+        <td>Library</td>
+    </tr>
 
-        <tr>
-          <td class="time">1:00 - 2:00</td>
-          <td class="lab">Computer Lab</td>
-          <td class="lab">Electronic Lab</td>
-          <td class="lab">Computer Networks</td>
-          <td>Mathematics / Project Work</td>
-          <td>Computer Lab</td>
-        </tr>
+    <tr>
+        <th>Wednesday</th>
+        <td>Mathematics</td>
+        <td>English</td>
+        
+        <td>Break</td>
+        <td >Computer Networks</td>
+        <td rowspan="1" colspan="2">
+            <div class="lab-box">
+                <b>Lab Details</b>
+                <table>
+                    <tr>
+                        <td><b>Batch A</b></td>
+                        <td>DBMS Lab</td>
+                    </tr>
+                    <tr>
+                        <td><b>Batch B</b></td>
+                        <td>OS Lab</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
 
-        <tr>
-          <td class="time">2:00 - 3:00</td>
-          <td class="lab">
-            <!-- Lab details: batches -->
-            <strong>Lab Details</strong><br/>
-            Batch A: DBMS Lab<br/>
-            Batch B: OS Lab
-          </td>
-          <td>Library</td>
-          <td class="lab">
-            <!-- Wednesday lab split -->
-            Batch A: DBMS Lab<br/>
-            Batch B: OS Lab
-          </td>
-          <td class="lab">English Seminar / Project Work</td>
-          <td>Library</td>
-        </tr>
+    <tr>
+        <th>Thursday</th>
+        <td colspan="2">Workshop</td>
+        
+        <td>Physics</td>
+        <td>Break</td>
+        <td>Mathematics</td>
+        <td>English</td>
+        <td>seminar</td>
+    </tr>
 
-        <tr>
-          <td class="time">3:00 - 4:00</td>
-          <td>Sports</td>
-          <td>Sports</td>
-          <td>Sports / Library</td>
-          <td>Seminar / Project</td>
-          <td>Sports</td>
-        </tr>
-      </tbody>
-    </table>
+    <tr>
+        <th>Friday</th>
+        <td>Computer Networks</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Break</td>
+        <td colspan="3">Project Work</td>
+        
+    </tr>
+</table>
 
-    <div id="legend" class="legend" aria-hidden="false">
-      <span><strong>Lab</strong> — Practical sessions (batches split)</span>
-      <span><strong>Break</strong> — 12:00–13:00</span>
-      <span><strong>Seminar</strong> — Presentations / discussions</span>
-    </div>
 
-    <p style="margin-top:12px;font-size:13px;color:#45627a">
-      Note: This is a best-effort HTML transcription of the image you provided. If any subject, time, or lab/batch assignment needs correction, tell me which cell(s) to change and I will update the HTML.
-    </p>
-  </div>
 </body>
 </html>
-    

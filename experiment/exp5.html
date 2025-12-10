@@ -1,69 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration Form </title>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            border: 2px solid black;
+            width: 700px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+            vertical-align: top;
+        }
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="tel"], 
+        select, 
+        textarea {
+            width: 250px;
+            padding: 4px;
+        }
+        textarea {
+            height: 60px;
+            resize: none;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 5px 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        hr {
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1 text-align="center">Student Registration Form </h1>
+
+<div class="form-container">
+    <h2><b>Student Registration Form</b></h2>
     <hr>
-
-    <!--Registration Form -->
-    <form method="post" action="submit.html">
-
-        <!--Full name-->
-        <p>
-            <label>Full name:</label>
-            <input type="text" name="fullname" placeholder="Enter your  full name" required>
-
-        </p>
-        <!--Email with validation-->
-        <p>
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Email valid email address" required>
-        </p>
-        <!--Password-->
-        <p>
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Enter password" required>
-
-        </p>
-        <!--Golden (Radio Buttons)-->
-        <p>
-            <label>Gender:</label>
-            <input type="radio" name="gender" value="male" required>Male
-            <input type="radio" name="gender" value="female">Female
-        </p>
-
-        <!--Course Selection (Dropdown)-->
-        <p>
-            <label>Course:</label>
-            <select name="course" required>
-                <option value="">--Select Course--</option>
-                <option value="btech">B.Tech</option>
-                <option value="bca">BCA</option>
-                <option value="mba">MBA</option>
-                <option value="mca">MCA</option>
-            </select>
-        </p>
-        <!--Contact number-->
-        <p>
-            <label>Contact No.</label>
-            <input type="tel" name="contact" placeholder="Enter phone number" required>
-        </p>
-        <!--Address(Textarea)-->
-        <p>
-            <label>Address:</label><br>
-            <textarea name="address" rows="4" cols="40" placeholder="Enter your address"required></textarea>
-        </p>
-        <!--Submit and Reset-->
-        <p>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required><br>
+         <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter valid email address" required><br>
+         <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required><br>
+         <br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br>
+         <br>
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option>-- Select Course --</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc (CS)</option>
+            <option>M.Tech</option>
+            <option>MCA</option>
+        </select><br>
+         <br>
+        <label for="contact">Contact No:</label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter phone number" required><br>
+         <br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address"></textarea><br>
+         <br>
+        <div class="buttons">
             <input type="submit" value="Register">
             <input type="reset" value="Clear">
-        </p>
+        </div>
     </form>
     <hr>
-    <p text-align="center">&copy:2025 Student Registration Portal</p>
+    <footer>
+        © 2025 Student Registration Portal
+    </footer>
+</div>
+
 </body>
 </html>
